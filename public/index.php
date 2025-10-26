@@ -1,3 +1,7 @@
+<?php
+require "functions.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,18 +19,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bg-zinc-200" style=" font-family: 'Josefin Sans', sans-serif;">
-  <?php include './include/header.php'; ?>
+<body class="bg-zinc-200 scroll-smooth" style=" font-family: 'Josefin Sans', sans-serif;">
+  <?php
+  include './include/header.php';
+  ?>
 
   <!-- HOME -->
   <div id="home" class="container col-xxl-8 px-4 pb-3 pt-64">
     <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
       <div class="col-10 col-sm-8 col-lg-6">
-        <img src="./img/gallery/gallery1.jpg" class="d-block mx-lg-auto " alt="image" loading="lazy" style="border-radius: 3%;">
+        <img src="./img/gallery/home1.jpg" class="d-block mx-lg-auto " alt="image" loading="lazy" style="border-radius: 3%;">
       </div>
       <div class="col-lg-6">
         <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Selamat Datang di Portofolio Saya </h1>
-        <h2 class="fw-bold text-body-emphasis lh-1 mb-3">Saya Dhaffa Galang Fahriza </h2>
+        <h2 class="fw-bold text-body-emphasis lh-1 mb-3">Nama Saya Dhaffa Galang Fahriza </h2>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
           <a href="#aboutme"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Next</button></a>
         </div>
@@ -106,8 +112,8 @@
         </div>
 
         <div class="col">
-          <a href="https://www.instagram.com/galangdhaffa" class="text-decoration-none">
-            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./img/gallery/fotografi.jpg'); background-size: cover;  background-repeat: no-repeat;">
+          <a href="gallery.php" class="text-decoration-none">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./img/gallery/wm/wmh (1).jpg'); background-size: cover;  background-repeat: no-repeat;">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
                 <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Photography</h3>
                 <ul class="d-flex list-unstyled mt-auto">
@@ -239,11 +245,11 @@
         <div class="card shadow-sm">
           <img src="./img/project/project1.png" alt="image">
           <div class="card-body">
-            <h4>portofolio v2</h4>
+            <h4>Portofolio v2</h4>
             <p class="card-text">Ini adalah website portofolio kedua saya yang di buat menggunakan php, js, tailwindcss, dan bootstrap, website ini di buat untuk memperbaiki portofolio v1.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <a href="https://galangdhaffa.github.io/itw2023_project1_233040024/"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
+                <a href="http://localhost/ptp/public/index.php"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
               </div>
               <small class="text-body-secondary">9 mins</small>
             </div>
@@ -269,7 +275,7 @@
         <div class="card shadow-sm">
           <img src="./img/project/project3.png" alt="image">
           <div class="card-body">
-            <h4>portofolio v1</h4>
+            <h4>Portofolio v1</h4>
             <p class="card-text">Ini website portofolio pertama saya yang saya buat menggunakan css dan html saja, website ini di buat karena project tugas besar agar bisa mendapatkan nilai A.</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
@@ -308,7 +314,8 @@
 
 
   <?php include './include/footer.php'; ?>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>
