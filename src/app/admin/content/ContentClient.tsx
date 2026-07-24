@@ -31,7 +31,7 @@ export default function ContentClient({ initialData }: { initialData: SocialCont
       onClientUploadComplete={(res) => {
         if (res && res[0]) setImage(res[0].url)
       }}
-      onUploadError={(error: Error) => toast.error(error.message)}
+      onUploadError={(error: Error) => { toast.error(error.message) }}
       appearance={{
         button: "bg-primary hover:bg-blue-600 text-white rounded-lg px-4 py-2 text-sm",
       }}
