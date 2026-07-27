@@ -1,7 +1,8 @@
 import { auth } from "@/auth"
 import { NextResponse } from "next/server"
 
-export default auth((req) => {
+// Wrap auth with custom logic for the proxy handler
+const authHandler = auth((req) => {
   const isLoggedIn = !!req.auth
   const isOnAdmin = req.nextUrl.pathname.startsWith('/admin')
   const isLoginPage = req.nextUrl.pathname === '/admin/login'
@@ -18,6 +19,9 @@ export default auth((req) => {
 
   return NextResponse.next()
 })
+
+// Export as named "proxy" function for Next.js 16+
+export const proxy = authHandler
 
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
